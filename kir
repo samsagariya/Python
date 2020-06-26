@@ -9,7 +9,7 @@ Private Sub CommandButton1_Click()
     
     Range("A100", Range("A100").End(xlDown)).Copy
     Range("B4").Select
-    ActiveSheet.Paste
+    ActiveSheet.PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
     Range("B100", Range("B100").End(xlDown)).Copy
