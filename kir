@@ -2,28 +2,29 @@ Private Sub CommandButton1_Click()
     
     Dim FromRange As Range
     Dim ToRange As Range
-
     Set FromRange = Application.InputBox("Enter the range from which you want to copy : ", Type:=8)
+    
+    
     Set ToRange = Range("A100")
     FromRange.Copy ToRange
     
-    Range("A100", Range("A100").End(xlDown)).Copy
+    Range("A100", Range("A" & Rows.Count).End(xlUp)).Copy
     Range("B4").PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
-    Range("B100", Range("B100").End(xlDown)).Copy
+    Range("B100", Range("B" & Rows.Count).End(xlUp)).Copy
     Range("C4").PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
-    Range("D100", Range("D100").End(xlDown)).Copy
-    Range("J4").Select
+    Range("D100", Range("D" & Rows.Count).End(xlUp)).Copy
+    Range("J4").PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
-    Range("E100", Range("E100").End(xlDown)).Copy
+    Range("E100", Range("E" & Rows.Count).End(xlUp)).Copy
     Range("G4").PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
-    Range("F100", Range("F100").End(xlDown)).Copy
+    Range("F100", Range("F" & Rows.Count).End(xlUp)).Copy
     Range("F4").PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
@@ -31,15 +32,13 @@ Private Sub CommandButton1_Click()
     Range("K4").PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
-    Range("G101", Range("G101").End(xlDown)).Copy
+    Range("G101", Range("G" & Rows.Count).End(xlUp)).Copy
     Range("L5").PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
-    Range("K100", Range("K100").End(xlDown)).Copy
+    Range("K100", Range("K" & Rows.Count).End(xlUp)).Copy
     Range("O4").PasteSpecial Paste:=xlPasteValues
     Application.CutCopyMode = False
     
-    Range("100:200").ClearContents
-    
-    
+
 End Sub
