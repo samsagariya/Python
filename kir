@@ -1,0 +1,53 @@
+Private Sub CommandButton1_Click()
+    
+    Dim FromRange As Range
+    Dim ToRange As Range
+
+    Set FromRange = Application.InputBox("Enter the range from which you want to copy : ", Type:=8)
+    Set ToRange = Range("A100")
+    FromRange.Copy ToRange
+    
+    Range("A100", Range("A100").End(xlDown)).Copy
+    Range("B4").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    
+    Range("B100", Range("B100").End(xlDown)).Copy
+    Range("C4").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    
+    Range("D100", Range("D100").End(xlDown)).Copy
+    Range("J4").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    
+    Range("E100", Range("E100").End(xlDown)).Copy
+    Range("G4").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    
+    Range("F100", Range("F100").End(xlDown)).Copy
+    Range("F4").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    
+    Range("G100").Copy
+    Range("K4").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    
+    Range("G101", Range("G101").End(xlDown)).Copy
+    Range("L5").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    
+    Range("K100", Range("K100").End(xlDown)).Copy
+    Range("O4").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    
+    Range("100:200").ClearContents
+    
+    
+End Sub
